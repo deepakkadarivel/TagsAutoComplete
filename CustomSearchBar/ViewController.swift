@@ -203,7 +203,7 @@ extension ViewController: ZFTokenFieldDataSource, ZFTokenFieldDelegate {
     //pragma mark - ZFTokenField DataSource
     
     func lineHeightForTokenInField(tokenField: ZFTokenField!) -> CGFloat {
-        return 40.0
+        return 30.0
     }
     
     func numberOfTokenInField(tokenField: ZFTokenField!) -> UInt {
@@ -224,9 +224,9 @@ extension ViewController: ZFTokenFieldDataSource, ZFTokenFieldDelegate {
             
             button.addTarget(self, action: "tokenDeleteButtonPressed:", forControlEvents: .TouchUpInside)
             
-            let size = label.sizeThatFits(CGSizeMake(1000, 40))
+            let size = label.sizeThatFits(CGSizeMake(750, 30))
             
-            view.frame = CGRectMake(0, 0, size.width + 97, 40)
+            view.frame = CGRectMake(0, 0, size.width + 75, 30)
         }
         
         return view
