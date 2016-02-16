@@ -18,15 +18,37 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wuq-d1-mzt" customClass="ZFTokenField">
-                                <rect key="frame" x="4" y="28" width="592" height="184"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" keyboardDismissMode="interactive" translatesAutoresizingMaskIntoConstraints="NO" id="liq-wd-x3t">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Opo-LC-R7h">
+                                        <rect key="frame" x="20" y="20" width="560" height="372"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="393" placeholderIntrinsicHeight="372" translatesAutoresizingMaskIntoConstraints="NO" id="z1S-wC-Ow4" customClass="ZFTokenField">
+                                                <rect key="frame" x="0.0" y="0.0" width="560" height="372"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="z1S-wC-Ow4" firstAttribute="top" secondItem="Opo-LC-R7h" secondAttribute="top" id="Liq-T0-xwk"/>
+                                            <constraint firstAttribute="bottom" secondItem="z1S-wC-Ow4" secondAttribute="bottom" id="OXd-vF-v0i"/>
+                                            <constraint firstAttribute="trailing" secondItem="z1S-wC-Ow4" secondAttribute="trailing" id="u0I-ju-7JN"/>
+                                            <constraint firstItem="z1S-wC-Ow4" firstAttribute="leading" secondItem="Opo-LC-R7h" secondAttribute="leading" id="u8g-V7-IHg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="184" id="wnt-bi-pJp"/>
+                                    <constraint firstAttribute="trailing" secondItem="Opo-LC-R7h" secondAttribute="trailing" constant="20" id="1gZ-ed-SnG"/>
+                                    <constraint firstAttribute="height" constant="250" id="66h-Ma-UAB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Opo-LC-R7h" secondAttribute="bottom" constant="16" id="QLG-pg-0YD"/>
+                                    <constraint firstItem="Opo-LC-R7h" firstAttribute="centerX" secondItem="liq-wd-x3t" secondAttribute="centerX" id="Xm1-FH-5PP"/>
+                                    <constraint firstItem="Opo-LC-R7h" firstAttribute="top" secondItem="liq-wd-x3t" secondAttribute="top" constant="20" id="bvF-Kh-zWX"/>
+                                    <constraint firstItem="Opo-LC-R7h" firstAttribute="leading" secondItem="liq-wd-x3t" secondAttribute="leading" constant="20" id="sFC-c4-d4x"/>
                                 </constraints>
-                            </view>
+                            </scrollView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3UW-5I-jLR">
-                                <rect key="frame" x="4" y="258" width="592" height="342"/>
+                                <rect key="frame" x="4" y="296" width="592" height="304"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="380" id="MCJ-qB-6xo"/>
@@ -57,7 +79,7 @@
                                 </variation>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HPR-gC-Plt">
-                                <rect key="frame" x="283" y="220" width="34" height="30"/>
+                                <rect key="frame" x="283" y="258" width="34" height="30"/>
                                 <state key="normal" title="send"/>
                                 <connections>
                                     <action selector="sendButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ARs-Ue-YK9"/>
@@ -66,26 +88,23 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="3UW-5I-jLR" firstAttribute="top" secondItem="Wuq-d1-mzt" secondAttribute="bottom" constant="8" id="8cR-RD-JRs"/>
-                            <constraint firstItem="Wuq-d1-mzt" firstAttribute="leading" secondItem="d3w-IM-oSe" secondAttribute="leading" constant="4" id="BS6-YY-vVA"/>
-                            <constraint firstItem="HPR-gC-Plt" firstAttribute="top" secondItem="Wuq-d1-mzt" secondAttribute="bottom" constant="8" id="FPF-bt-eSR"/>
+                            <constraint firstItem="liq-wd-x3t" firstAttribute="leading" secondItem="d3w-IM-oSe" secondAttribute="leading" id="1bT-Ps-d9F"/>
+                            <constraint firstItem="HPR-gC-Plt" firstAttribute="top" secondItem="liq-wd-x3t" secondAttribute="bottom" constant="8" id="BQB-Fw-huQ"/>
+                            <constraint firstItem="liq-wd-x3t" firstAttribute="leading" secondItem="d3w-IM-oSe" secondAttribute="leading" id="Bss-ag-PJY"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="3UW-5I-jLR" secondAttribute="bottom" id="GAJ-FE-ylB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="3UW-5I-jLR" secondAttribute="trailing" constant="-16" id="PGD-3F-Tjp"/>
                             <constraint firstItem="HPR-gC-Plt" firstAttribute="centerX" secondItem="d3w-IM-oSe" secondAttribute="centerX" id="XkN-7V-Wfu"/>
-                            <constraint firstItem="Wuq-d1-mzt" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="8" id="r1E-IQ-f1R"/>
-                            <constraint firstAttribute="trailing" secondItem="Wuq-d1-mzt" secondAttribute="trailing" constant="4" id="rQO-1I-t28"/>
+                            <constraint firstAttribute="trailing" secondItem="liq-wd-x3t" secondAttribute="trailing" id="YoH-hK-3e6"/>
+                            <constraint firstItem="liq-wd-x3t" firstAttribute="top" secondItem="d3w-IM-oSe" secondAttribute="top" id="bxy-NU-S4Z"/>
+                            <constraint firstItem="liq-wd-x3t" firstAttribute="top" secondItem="d3w-IM-oSe" secondAttribute="top" id="gqj-FE-gkS"/>
+                            <constraint firstAttribute="trailing" secondItem="liq-wd-x3t" secondAttribute="trailing" id="hny-ax-2ff"/>
                             <constraint firstItem="3UW-5I-jLR" firstAttribute="leading" secondItem="d3w-IM-oSe" secondAttribute="leadingMargin" constant="-16" id="rtY-d1-vua"/>
                             <constraint firstItem="3UW-5I-jLR" firstAttribute="top" secondItem="HPR-gC-Plt" secondAttribute="bottom" constant="8" id="yuH-Ai-0Yi"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="8cR-RD-JRs"/>
-                            </mask>
-                        </variation>
                     </view>
                     <connections>
                         <outlet property="tblSearchResults" destination="3UW-5I-jLR" id="m1E-9Y-uhE"/>
-                        <outlet property="tokenField" destination="Wuq-d1-mzt" id="5fx-eY-JBP"/>
+                        <outlet property="tokenField" destination="z1S-wC-Ow4" id="SPH-Mx-eD7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
