@@ -1,0 +1,10 @@
+PODS:
+  - ZFTokenField (0.0.1)
+
+DEPENDENCIES:
+  - ZFTokenField
+
+SPEC CHECKSUMS:
+  ZFTokenField: 3e3ed288e32e085bb8f9c38b4eeb3806711b475a
+
+COCOAPODS: 0.39.0
